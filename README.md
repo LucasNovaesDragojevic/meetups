@@ -1,1 +1,3 @@
-# meetups
+# Meetups
+
+Study of Google Firebase Messaging
