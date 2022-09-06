@@ -3,4 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="imagem_do_evento">Imagem do evento</string>
     <string name="icone_inscritos">icone inscritos</string>
+    <string name="canal_principal_nome">Principal</string>
+    <string name="canal_principal_descricao">Principal canal de notificações</string>
 </resources>

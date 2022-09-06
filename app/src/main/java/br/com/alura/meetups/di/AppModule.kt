@@ -1,5 +1,8 @@
 package br.com.alura.meetups.di
 
+import android.app.NotificationManager
+import android.content.Context
+import br.com.alura.meetups.notifications.CanalPrincipal
 import br.com.alura.meetups.preferences.FirebaseTokenPreferences
 import br.com.alura.meetups.repository.DispositivoRepository
 import br.com.alura.meetups.repository.EventoRepository
@@ -54,10 +57,16 @@ val preferencesModule = module {
     single { FirebaseTokenPreferences(get()) }
 }
 
+val notificacaoModule = module {
+    single { CanalPrincipal(get(), get()) }
+    single { get<Context>().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager }
+}
+
 val appModules = listOf(
     retrofitModule,
     viewModelModule,
     repositoryModule,
-    preferencesModule
+    preferencesModule,
+    notificacaoModule
 )
 
